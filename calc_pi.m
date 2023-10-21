@@ -18,7 +18,10 @@ fplot(lok{2}, [-1, 1],'g', 'LineWidth',2) % na graf nariše točke na spodnj pol
 axis equal 
 xlim([-1, 1]) 
 ylim([-1, 1]) 
-
+title({['Določitev vrednosti števila \pi s pomočjo'] ['metode Monte Carlo, n= ' num2str(n)]})
+xlabel('x') 
+ylabel('y')
+legend({'Točke zunaj kroga','Točke znotraj kvadrata', 'Točke na loku krožnice'},'Location','southeastoutside')
 hold off
 
 function [pi_num, odstopanje]=area_pi(n)
