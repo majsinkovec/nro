@@ -1,0 +1,206 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8654,        198]
+NotebookOptionsPosition[      7856,        177]
+NotebookOutlinePosition[      8293,        194]
+CellTagsIndexPosition[      8250,        191]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "t_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Sin", "[", "t", "]"}], "*", 
+   SuperscriptBox["t", "2"], "*", 
+   RowBox[{"Exp", "[", 
+    RowBox[{"-", "t"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "[", "n_", "]"}], ":=", 
+  RowBox[{"Normal", "[", 
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", 
+       RowBox[{"t0", "=", "2"}], ",", " ", "n"}], "}"}]}], "]"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.908835423645091*^9, 3.9088354556185923`*^9}, {
+   3.9088354955000024`*^9, 3.908835523228766*^9}, 3.908835638939286*^9, 
+   3.90883571787481*^9, {3.9088703861315556`*^9, 3.9088704055480003`*^9}, 
+   3.9088705170698576`*^9, 3.908870984342622*^9, {3.908871128141867*^9, 
+   3.908871128496499*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"861966d3-fd0a-4b98-8334-7b5e64bddd70"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t5", " ", "=", " ", 
+   RowBox[{"taylor", "[", 
+    RowBox[{"n", "=", "5"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.908835101295545*^9, 3.908835129210987*^9}, {
+   3.908835478475321*^9, 3.9088354785784893`*^9}, 3.908835515811353*^9, {
+   3.9088356724433355`*^9, 3.9088356787320137`*^9}, {3.9088357522452126`*^9, 
+   3.908835752923106*^9}, {3.9088692577249975`*^9, 3.9088692594138784`*^9}, 
+   3.9088704951652136`*^9},
+ CellLabel->"In[3]:=",ExpressionUUID->"b99de6a5-bbc6-4c02-80be-1c00655c4eb7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f", "[", "t", "]"}], ",", 
+       RowBox[{"Evaluate", "[", 
+        RowBox[{"g", "[", "n", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", "0", ",", " ", "4"}], "}"}], ",", " ", 
+     RowBox[{"AxesLabel", "->", 
+      RowBox[{"{", 
+       RowBox[{"\"\<t\>\"", ",", " ", "\"\<f[t], g[t]\>\""}], "}"}]}], ",", 
+     " ", "\[IndentingNewLine]", 
+     RowBox[{"AspectRatio", "->", "1"}], ",", " ", 
+     RowBox[{"PlotRange", "->", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", " ", "4"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "}"}]}], " ", ",", 
+     " ", 
+     RowBox[{"PlotLegends", "->", 
+      RowBox[{"{", 
+       RowBox[{"\"\<f(t)\>\"", ",", " ", 
+        RowBox[{"\"\<g(t), n=\>\"", "<>", 
+         RowBox[{"ToString", "[", "n", "]"}]}]}], "}"}]}], ",", "\n", 
+     RowBox[{
+     "PlotLabel", "->", 
+      "\"\<Diagram funkcije f(t) in njenega razvoja v Taylorjevo vrsto g(t)\>\
+\""}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", " ", "1", ",", " ", "10", ",", " ", "1"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9088320208242292`*^9, 3.908832073061364*^9}, 
+   3.908832137398143*^9, {3.908832344098419*^9, 3.908832393031511*^9}, {
+   3.908832642727733*^9, 3.9088326572556167`*^9}, 3.908832842985464*^9, {
+   3.9088329259827337`*^9, 3.9088329273823247`*^9}, {3.908832976750367*^9, 
+   3.908832988605803*^9}, {3.9088332234227114`*^9, 3.908833242006022*^9}, {
+   3.9088333534830427`*^9, 3.9088333559310503`*^9}, {3.9088333945924406`*^9, 
+   3.9088334074425755`*^9}, 3.9088334441443405`*^9, {3.9088335486306615`*^9, 
+   3.9088335650074077`*^9}, {3.9088337396975527`*^9, 
+   3.9088337456494923`*^9}, {3.9088337763858194`*^9, 3.908833792015286*^9}, 
+   3.908833823751901*^9, {3.908833917869619*^9, 3.908833919685835*^9}, 
+   3.9088341589069643`*^9, {3.9088343274560385`*^9, 3.9088343669210615`*^9}, {
+   3.9088344141336017`*^9, 3.908834435282116*^9}, {3.90883533105173*^9, 
+   3.908835334515117*^9}, 3.9088353866198163`*^9, {3.9088358936049643`*^9, 
+   3.9088358946447687`*^9}, {3.9088693811973915`*^9, 
+   3.9088695543579063`*^9}, {3.9088696108862333`*^9, 3.908870033544656*^9}, {
+   3.908870066541919*^9, 3.9088700810684853`*^9}, {3.908870261732907*^9, 
+   3.908870318199835*^9}, {3.9088704199323587`*^9, 3.9088704716842995`*^9}, {
+   3.9088705598540626`*^9, 3.9088705761174107`*^9}, {3.9088707509138327`*^9, 
+   3.9088707761508036`*^9}, {3.908870838851949*^9, 3.9088708412789917`*^9}, {
+   3.9088709057504663`*^9, 3.908870912014454*^9}, {3.9088709709587116`*^9, 
+   3.9088709954552984`*^9}, {3.908871048422279*^9, 3.9088711487743587`*^9}, {
+   3.908871216960753*^9, 3.9088712694649115`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"742d75e7-af0d-4996-95a6-496e70c1fe84"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 10, 1}}, Typeset`size$$ = {
+    451.19999999999993`, {183., 187.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`f[$CellContext`t], 
+         Evaluate[
+          $CellContext`g[$CellContext`n$$]]}, {$CellContext`t, 0, 4}, 
+        AxesLabel -> {"t", "f[t], g[t]"}, AspectRatio -> 1, 
+        PlotRange -> {{0, 4}, {-2, 2}}, 
+        PlotLegends -> {"f(t)", "g(t), n=" <> ToString[$CellContext`n$$]}, 
+        PlotLabel -> 
+        "Diagram funkcije f(t) in njenega razvoja v Taylorjevo vrsto g(t)"], 
+      "Specifications" :> {{$CellContext`n$$, 1, 10, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{499., {225.63403328722342`, 231.36596671277658`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.9088697170245748`*^9, 3.9088697217253704`*^9}, 
+   3.908869807195039*^9, {3.908869899150034*^9, 3.9088699633878937`*^9}, {
+   3.908870036014019*^9, 3.9088700884349265`*^9}, {3.9088702763589864`*^9, 
+   3.908870279323217*^9}, {3.9088704536464324`*^9, 3.908870485115982*^9}, {
+   3.908870533150245*^9, 3.908870536399094*^9}, 3.9088705768301806`*^9, {
+   3.9088707532358866`*^9, 3.9088707742167892`*^9}, 3.9088708419969287`*^9, {
+   3.9088709129660807`*^9, 3.9088709153039794`*^9}, 3.9088709740026884`*^9, 
+   3.9088710601389427`*^9, 3.908871105604714*^9, {3.9088711516267295`*^9, 
+   3.908871170366759*^9}, {3.9088712324372764`*^9, 3.908871274321575*^9}, 
+   3.908871306128438*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"32254969-ccc1-49f1-86af-0b6043d4a643"]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{3.9088356493869786`*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"b6c78e85-f2ec-4890-a256-df76536d9066"]
+},
+WindowSize->{1141.2, 574.8},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"97734cd6-6dbf-4883-adf3-e2b470f90539"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 930, 23, 48, "Input",ExpressionUUID->"861966d3-fd0a-4b98-8334-7b5e64bddd70"],
+Cell[1491, 45, 539, 10, 28, "Input",ExpressionUUID->"b99de6a5-bbc6-4c02-80be-1c00655c4eb7"],
+Cell[CellGroupData[{
+Cell[2055, 59, 2984, 60, 67, "Input",ExpressionUUID->"742d75e7-af0d-4996-95a6-496e70c1fe84"],
+Cell[5042, 121, 2646, 49, 476, "Output",ExpressionUUID->"32254969-ccc1-49f1-86af-0b6043d4a643"]
+}, Open  ]],
+Cell[7703, 173, 149, 2, 58, "Input",ExpressionUUID->"b6c78e85-f2ec-4890-a256-df76536d9066"]
+}
+]
+*)
+
